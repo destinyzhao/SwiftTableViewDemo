@@ -100,8 +100,33 @@
                             <constraint firstItem="VdF-GB-7fH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hb6-Hh-qgR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tableview Demo" id="TAF-3x-yp5"/>
+                    <navigationItem key="navigationItem" title="Tableview Demo" id="TAF-3x-yp5">
+                        <barButtonItem key="rightBarButtonItem" id="iWK-jH-DDR">
+                            <view key="customView" contentMode="scaleToFill" id="2yd-Su-4nY">
+                                <rect key="frame" x="233" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-RS-4it">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="编辑"/>
+                                        <connections>
+                                            <action selector="editorBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygV-XE-TFu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HCk-RS-4it" secondAttribute="trailing" id="IIl-KA-sBW"/>
+                                    <constraint firstItem="HCk-RS-4it" firstAttribute="leading" secondItem="2yd-Su-4nY" secondAttribute="leading" id="KKY-jZ-ShT"/>
+                                    <constraint firstAttribute="bottom" secondItem="HCk-RS-4it" secondAttribute="bottom" id="YDd-Zp-fYC"/>
+                                    <constraint firstItem="HCk-RS-4it" firstAttribute="top" secondItem="2yd-Su-4nY" secondAttribute="top" id="h8y-cg-6dw"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="editorButtonItem" destination="HCk-RS-4it" id="slm-yg-oHH"/>
                         <outlet property="tableView" destination="VdF-GB-7fH" id="kfM-dw-5KZ"/>
                     </connections>
                 </viewController>

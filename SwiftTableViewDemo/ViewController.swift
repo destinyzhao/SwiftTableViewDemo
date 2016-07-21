@@ -11,18 +11,20 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     // Tableview
     @IBOutlet weak var tableView: UITableView!
-    // Dic
+    // 商品数组
     var dataArray = [AnyObject]()
-    
+    // 选中商品数组
+    var selectDataArray = [AnyObject]()
+    // 编辑按钮
+    @IBOutlet weak var editorButtonItem: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // xib cell
+        // xib load cell
         //let nib = UINib(nibName: "CustomCellView", bundle: nil)
         //self.tableView.registerNib(nib, forCellReuseIdentifier: "CustomCell")
-        
         self.loadData()
     }
 
@@ -33,13 +35,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     // 初始化数据
     func loadData() -> Void {
-        for i in 0...9 {
-            var dic = [String:String]()
-            dic["goodsImgUrl"] = "http://pic14.nipic.com/20110427/2944718_000916112196_2.jpg"
-            dic["goodsName"] = "赵师傅红烧牦牛面\(i)"
-            dic["goodsPrice"] = "20.0"
-           
-            dataArray.append(dic)
+        for i in 0...29 {
+            let goods = GoodsModel()
+            goods.goodsId = "\(i)"
+            goods.goodsName = "赵师傅红烧牦牛面\(i)"
+            goods.goodsImgUrl = "http://pic14.nipic.com/20110427/2944718_000916112196_2.jpg"
+            goods.goodsPrice = "20.0"
+            
+            dataArray.append(goods)
         }
     }
     
@@ -48,10 +51,25 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
-        let cell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomCell
+        let identifier:String = "CustomCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! CustomCell
         cell.selectionStyle = UITableViewCellSelectionStyle.None
-        cell .showCellWithDictionary(dataArray[indexPath.row] as! Dictionary<String, String>)
+        cell.row = indexPath.row
+        let goods = dataArray[indexPath.row] as! GoodsModel
+        cell.showCellWithData(goods)
+        
+        cell.cellSelectBlock = { (selected:Bool, row:Int) in
+            if (selected) {
+                print("selected:\(selected)" + "row:\(row)")
+                self.selectDataArray.append(self.dataArray[indexPath.row])
+            }
+            else
+            {
+                print("selected:\(selected)" + "row:\(row)")
+                // removeObject Array扩展方法
+                self.selectDataArray.removeObject(goods)
+            }
+        }
         
         return cell
     }
@@ -59,7 +77,43 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 76.0
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
 
+        let cell:CustomCell = cell as! CustomCell
+        let goods = dataArray[indexPath.row] as! GoodsModel
+
+        if (selectDataArray as NSArray).containsObject(goods) {
+            cell.selectedBtton(true)
+        }
+        else
+        {
+            cell.selectedBtton(false)
+        }
+    
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.Insert
+    }
+    
+    @IBAction func editorBtnClicked(sender: UIButton) {
+        if (!self.tableView.editing) {
+            self.tableView.setEditing(true, animated: false)
+            editorButtonItem.setTitle("完成", forState: UIControlState.Normal)
+            self.tableView .reloadData()
+        }
+        else
+        {
+            self.tableView.setEditing(false, animated: false)
+            editorButtonItem.setTitle("编辑", forState: UIControlState.Normal)
+            self.tableView.reloadData()
+        }
+    }
 
 }
 
