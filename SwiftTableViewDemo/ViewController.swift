@@ -72,7 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 self.selectDataArray.removeObject(goods)
             }
         }
-        
+
         return cell
     }
     
@@ -107,8 +107,30 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return true
     }
     
-    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        return UITableViewCellEditingStyle.Insert
+
+    func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "删除"
+    }
+    
+//    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+//        let deleteAction = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
+//            print("delete button tapped")
+//        }
+//        deleteAction.backgroundColor = UIColor.lightGrayColor()
+//        //deleteAction.backgroundColor = UIColor(patternImage: UIImage(named: "message_selcet_s")!)
+//        
+//        let sharedAction = UITableViewRowAction(style: .Normal, title: "Share") { action, index in
+//            print("Done button tapped")
+//        }
+//        sharedAction.backgroundColor = UIColor.blueColor()
+//        
+//        return [deleteAction,sharedAction]
+//    }
+    
+    func tableView(tableView:UITableView, commitEditingStyle editingStyle:UITableViewCellEditingStyle, forRowAtIndexPath indexPath:NSIndexPath) {
+        if editingStyle == .Delete {
+            print("删除")
+        }
     }
     
     @IBAction func editorBtnClicked(sender: UIButton) {
@@ -124,6 +146,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             self.tableView.reloadData()
         }
     }
-
+    
 }
 
