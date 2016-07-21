@@ -25,6 +25,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // xib load cell
         //let nib = UINib(nibName: "CustomCellView", bundle: nil)
         //self.tableView.registerNib(nib, forCellReuseIdentifier: "CustomCell")
+        
+        self.tableView.allowsSelectionDuringEditing = true
         self.loadData()
     }
 
@@ -91,6 +93,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.selectedBtton(false)
         }
     
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // 编辑状态下多选
+        if (self.tableView.editing) {
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomCell
+            cell.selectAction(cell.btnSelect)
+        }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
