@@ -1,12 +1,18 @@
 PODS:
   - Kingfisher (2.4.1)
+  - SnapKit (0.21.1)
+  - XWSwiftRefresh (0.1.9)
 
 DEPENDENCIES:
   - Kingfisher
+  - SnapKit
+  - XWSwiftRefresh
 
 SPEC CHECKSUMS:
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  XWSwiftRefresh: 1981ad8f7579da94c94a8e7720803f2579dcde46
 
-PODFILE CHECKSUM: 8f785569e49775b71dc19607d58061e13af08406
+PODFILE CHECKSUM: f523de996c4e83c55cfa989ba33bb89c9fd29af4
 
 COCOAPODS: 1.0.1

@@ -43,7 +43,7 @@ class CustomCell: UITableViewCell {
         /*自定义删除*/
         // 左侧删除按钮
         self.deleteBtn = UIButton()
-        self.deleteBtn.setImage(UIImage(named: "message_selcet_s"), forState: UIControlState.Normal)
+        self.deleteBtn.setImage(UIImage(named: "shop_icon_comment"), forState: UIControlState.Normal)
         self.deleteBtn.backgroundColor = UIColor.clearColor()
         //在cell中添加一个view
         self.deleteView = UIView()
