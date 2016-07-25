@@ -21,42 +21,42 @@ class CustomTableView: UITableView {
 
     var tips:String{
         get{
-            return self._tips
+            return _tips
         }
         set{
-            self._tips = newValue
-            self.tipsLbl.text = _tips
+            _tips = newValue
+            tipsLbl.text = _tips
         }
     }
     
     var hideBgImgView:Bool{
         get {
-            return self._hideBgImgView
+            return _hideBgImgView
         }
         set{
-            self._hideBgImgView = newValue
-            self.imgView.hidden = _hideBgImgView
+            _hideBgImgView = newValue
+            imgView.hidden = _hideBgImgView
         }
     }
     
     var hideTips:Bool{
         get{
-            return self._hideTips
+            return _hideTips
         }
         set{
-            self._hideTips = newValue
-            self.tipsLbl.hidden = _hideTips
+            _hideTips = newValue
+            tipsLbl.hidden = _hideTips
         }
     }
     
     var noDataImage:UIImage{
         get{
-            return self._noDataImage
+            return _noDataImage
         }
         set {
             
-            self._noDataImage = newValue
-            self.imgView.image = _noDataImage
+            _noDataImage = newValue
+            imgView.image = _noDataImage
             
             imgView.snp_makeConstraints { (make) in
                 make.centerX.equalTo(bgView)
