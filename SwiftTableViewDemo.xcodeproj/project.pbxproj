@@ -23,6 +23,11 @@
 		FA1A315F1D45EDC900DB0311 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A315E1D45EDC900DB0311 /* CustomTableView.swift */; };
 		FAE253EA1D45B6E000AD3033 /* TableViewEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE253E91D45B6E000AD3033 /* TableViewEditViewController.swift */; };
 		FAE253F01D45CB2C00AD3033 /* RefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE253EF1D45CB2C00AD3033 /* RefreshTableViewController.swift */; };
+		FAF871DC1D47581B00D6FA86 /* HeaderAndFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF871DB1D47581B00D6FA86 /* HeaderAndFooterViewController.swift */; };
+		FAF871DE1D475A0000D6FA86 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF871DD1D475A0000D6FA86 /* HeaderView.xib */; };
+		FAF871E21D475B5100D6FA86 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF871E11D475B5100D6FA86 /* HeaderView.swift */; };
+		FAF871E41D47618000D6FA86 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF871E31D47618000D6FA86 /* FooterView.swift */; };
+		FAF871E61D47618E00D6FA86 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF871E51D47618E00D6FA86 /* FooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		FA1A315E1D45EDC900DB0311 /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		FAE253E91D45B6E000AD3033 /* TableViewEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewEditViewController.swift; sourceTree = "<group>"; };
 		FAE253EF1D45CB2C00AD3033 /* RefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTableViewController.swift; sourceTree = "<group>"; };
+		FAF871DB1D47581B00D6FA86 /* HeaderAndFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderAndFooterViewController.swift; sourceTree = "<group>"; };
+		FAF871DD1D475A0000D6FA86 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		FAF871E11D475B5100D6FA86 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FAF871E31D47618000D6FA86 /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		FAF871E51D47618E00D6FA86 /* FooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +193,10 @@
 			children = (
 				FA060DEB1D3E105100CA8E7B /* CustomCellView.xib */,
 				FA1A315E1D45EDC900DB0311 /* CustomTableView.swift */,
+				FAF871DD1D475A0000D6FA86 /* HeaderView.xib */,
+				FAF871E11D475B5100D6FA86 /* HeaderView.swift */,
+				FAF871E31D47618000D6FA86 /* FooterView.swift */,
+				FAF871E51D47618E00D6FA86 /* FooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +223,7 @@
 				FAE253E91D45B6E000AD3033 /* TableViewEditViewController.swift */,
 				FAE253EF1D45CB2C00AD3033 /* RefreshTableViewController.swift */,
 				FA1A315C1D45EDA200DB0311 /* CustomTableViewController.swift */,
+				FAF871DB1D47581B00D6FA86 /* HeaderAndFooterViewController.swift */,
 			);
 			path = ViewConstroller;
 			sourceTree = "<group>";
@@ -321,6 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA060DC01D3DF75C00CA8E7B /* LaunchScreen.storyboard in Resources */,
+				FAF871E61D47618E00D6FA86 /* FooterView.xib in Resources */,
+				FAF871DE1D475A0000D6FA86 /* HeaderView.xib in Resources */,
 				FA060DEC1D3E105200CA8E7B /* CustomCellView.xib in Resources */,
 				FA060DBD1D3DF75C00CA8E7B /* Assets.xcassets in Resources */,
 				FA060DBB1D3DF75C00CA8E7B /* Main.storyboard in Resources */,
@@ -396,13 +413,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF871DC1D47581B00D6FA86 /* HeaderAndFooterViewController.swift in Sources */,
 				FA060DEF1D4098A700CA8E7B /* GoodsModel.swift in Sources */,
 				FA060DF21D40A25800CA8E7B /* ArrayExtensions.swift in Sources */,
 				FA060DB81D3DF75C00CA8E7B /* ViewController.swift in Sources */,
 				FA060DE91D3DF9DB00CA8E7B /* CustomCell.swift in Sources */,
 				FA1A315D1D45EDA200DB0311 /* CustomTableViewController.swift in Sources */,
 				FA1A315F1D45EDC900DB0311 /* CustomTableView.swift in Sources */,
+				FAF871E21D475B5100D6FA86 /* HeaderView.swift in Sources */,
 				FAE253EA1D45B6E000AD3033 /* TableViewEditViewController.swift in Sources */,
+				FAF871E41D47618000D6FA86 /* FooterView.swift in Sources */,
 				FAE253F01D45CB2C00AD3033 /* RefreshTableViewController.swift in Sources */,
 				FA060DB61D3DF75C00CA8E7B /* AppDelegate.swift in Sources */,
 			);

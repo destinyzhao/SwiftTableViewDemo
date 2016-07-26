@@ -28,7 +28,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     // 初始化数据
     func loadData() -> Void {
-        dataArray = ["TableView多选和左滑自定义删除","下拉刷新","自定义TableView"]
+        dataArray = ["TableView多选和左滑自定义删除","下拉刷新","自定义TableView","Header And Footer"]
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +59,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             self.performSegueWithIdentifier("RefreshTableVC", sender: nil)
         case 2:
             self.performSegueWithIdentifier("CustomTableVC", sender: nil)
+        case 3:
+            self.performSegueWithIdentifier("HeaderAndFooterVC", sender: nil)
         default: break
             
         }
