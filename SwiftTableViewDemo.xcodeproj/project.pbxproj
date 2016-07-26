@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1FFBDB3DA5F8FAE2BE133FCD /* Pods_SwiftTableViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8EDCD237099D197113D536 /* Pods_SwiftTableViewDemo.framework */; };
 		FA060DB61D3DF75C00CA8E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA060DB51D3DF75C00CA8E7B /* AppDelegate.swift */; };
-		FA060DB81D3DF75C00CA8E7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA060DB71D3DF75C00CA8E7B /* ViewController.swift */; };
 		FA060DBB1D3DF75C00CA8E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA060DB91D3DF75C00CA8E7B /* Main.storyboard */; };
 		FA060DBD1D3DF75C00CA8E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA060DBC1D3DF75C00CA8E7B /* Assets.xcassets */; };
 		FA060DC01D3DF75C00CA8E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA060DBE1D3DF75C00CA8E7B /* LaunchScreen.storyboard */; };
@@ -23,6 +22,7 @@
 		FA1A315F1D45EDC900DB0311 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A315E1D45EDC900DB0311 /* CustomTableView.swift */; };
 		FAE253EA1D45B6E000AD3033 /* TableViewEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE253E91D45B6E000AD3033 /* TableViewEditViewController.swift */; };
 		FAE253F01D45CB2C00AD3033 /* RefreshTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE253EF1D45CB2C00AD3033 /* RefreshTableViewController.swift */; };
+		FAEE8B301D4793670073637D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE8B2F1D4793670073637D /* ViewController.swift */; };
 		FAF871DC1D47581B00D6FA86 /* HeaderAndFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF871DB1D47581B00D6FA86 /* HeaderAndFooterViewController.swift */; };
 		FAF871DE1D475A0000D6FA86 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF871DD1D475A0000D6FA86 /* HeaderView.xib */; };
 		FAF871E21D475B5100D6FA86 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF871E11D475B5100D6FA86 /* HeaderView.swift */; };
@@ -53,7 +53,6 @@
 		2E9CC671E67FC8DD9E3CC32F /* Pods-SwiftTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTableViewDemo/Pods-SwiftTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FA060DB21D3DF75B00CA8E7B /* SwiftTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA060DB51D3DF75C00CA8E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA060DB71D3DF75C00CA8E7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA060DBA1D3DF75C00CA8E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA060DBC1D3DF75C00CA8E7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA060DBF1D3DF75C00CA8E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		FA1A315E1D45EDC900DB0311 /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		FAE253E91D45B6E000AD3033 /* TableViewEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewEditViewController.swift; sourceTree = "<group>"; };
 		FAE253EF1D45CB2C00AD3033 /* RefreshTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTableViewController.swift; sourceTree = "<group>"; };
+		FAEE8B2F1D4793670073637D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAF871DB1D47581B00D6FA86 /* HeaderAndFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderAndFooterViewController.swift; sourceTree = "<group>"; };
 		FAF871DD1D475A0000D6FA86 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		FAF871E11D475B5100D6FA86 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -153,7 +153,6 @@
 				FA060DEA1D3E103300CA8E7B /* View */,
 				FA060DE31D3DF8D100CA8E7B /* Cell */,
 				FA060DB51D3DF75C00CA8E7B /* AppDelegate.swift */,
-				FA060DB71D3DF75C00CA8E7B /* ViewController.swift */,
 				FA060DB91D3DF75C00CA8E7B /* Main.storyboard */,
 				FA060DBC1D3DF75C00CA8E7B /* Assets.xcassets */,
 				FA060DBE1D3DF75C00CA8E7B /* LaunchScreen.storyboard */,
@@ -220,6 +219,7 @@
 		FAE253E61D45B67200AD3033 /* ViewConstroller */ = {
 			isa = PBXGroup;
 			children = (
+				FAEE8B2F1D4793670073637D /* ViewController.swift */,
 				FAE253E91D45B6E000AD3033 /* TableViewEditViewController.swift */,
 				FAE253EF1D45CB2C00AD3033 /* RefreshTableViewController.swift */,
 				FA1A315C1D45EDA200DB0311 /* CustomTableViewController.swift */,
@@ -416,10 +416,10 @@
 				FAF871DC1D47581B00D6FA86 /* HeaderAndFooterViewController.swift in Sources */,
 				FA060DEF1D4098A700CA8E7B /* GoodsModel.swift in Sources */,
 				FA060DF21D40A25800CA8E7B /* ArrayExtensions.swift in Sources */,
-				FA060DB81D3DF75C00CA8E7B /* ViewController.swift in Sources */,
 				FA060DE91D3DF9DB00CA8E7B /* CustomCell.swift in Sources */,
 				FA1A315D1D45EDA200DB0311 /* CustomTableViewController.swift in Sources */,
 				FA1A315F1D45EDC900DB0311 /* CustomTableView.swift in Sources */,
+				FAEE8B301D4793670073637D /* ViewController.swift in Sources */,
 				FAF871E21D475B5100D6FA86 /* HeaderView.swift in Sources */,
 				FAE253EA1D45B6E000AD3033 /* TableViewEditViewController.swift in Sources */,
 				FAF871E41D47618000D6FA86 /* FooterView.swift in Sources */,
